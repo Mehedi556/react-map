@@ -6,10 +6,10 @@ import {
   LoadScript,
 } from '@react-google-maps/api';
 
-const Direction = () => {
+const Direction = ({origin, destination}) => {
   const [response, setResponse] = useState(null);
-  const origin = 'mirpur 10 circle dhaka';
-  const destination = 'gulshan 1 circle dhaka';
+//   const origin = 'mirpur 10 circle dhaka';
+//   const destination = 'gulshan 1 circle dhaka';
   const directionsCallback = res => {
     console.log(res);
 
@@ -33,11 +33,11 @@ const Direction = () => {
             width: '100vw',
           }}
           // required
-          zoom={17}
+          zoom={7}
           // required
           center={{
-            lat: 0,
-            lng: -180,
+            lat: 23.807093441164767,
+            lng: 90.36858214350266,
           }}
         >
           {destination !== '' && origin !== '' && (
